@@ -12,7 +12,7 @@ from sklearn.ensemble import RandomForestClassifier,AdaBoostClassifier,GradientB
 from xgboost import XGBClassifier
 from catboost import CatBoostClassifier
 from sklearn.metrics import f1_score
-from src.utils import evaluate_model
+from src.utils import evaluate_model, save_object
 import pandas as pd 
 
 @dataclass
@@ -62,6 +62,8 @@ class ModelTrainer:
 
                 score = f1_score(y_test,best_model_predict)
                 logging.info("best score is {}".format(score))
+
+                save_object(file_path=self.model_trainer_config.model_path,obj=best_model)
                 return score 
             
         except Exception as e:

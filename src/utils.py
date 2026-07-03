@@ -26,3 +26,12 @@ def evaluate_model(y_train,y_train_pred,y_test,y_test_pred):
 
     return f1_train,roc_train,f1_test,roc_test
 
+def load_object(file_path):
+    try:
+        with open(file_path,"rb") as file:
+            return pickle.load(file)
+
+    except Exception as e:
+        raise HeartDiseaseError(e,sys)
+    
+
