@@ -6,6 +6,7 @@ from dataclasses import dataclass
 import pandas as pd 
 import numpy as np 
 from sklearn.model_selection import train_test_split
+from src.components.data_transformation import DataTransformation,DataTransformationConfig
 
 @dataclass
 class DataIngestionConfig:
@@ -25,13 +26,13 @@ class DataIngestion:
             df = pd.read_csv(file_path)
 
             os.makedirs(os.path.dirname(self.data_ingestion_config.raw_data_path),exist_ok=True)
-            df.to_csv(self.data_ingestion_config.raw_data_path,index=False,header=None)
+            df.to_csv(self.data_ingestion_config.raw_data_path,index=None,header=True)
 
             train_data,test_data = train_test_split(df,test_size=0.2,random_state=1)
             logging.info("Train test split done")
 
-            train_data.to_csv(self.data_ingestion_config.train_data_path,index=False,header=None)
-            test_data.to_csv(self.data_ingestion_config.test_data_path,index=False,header=None)
+            train_data.to_csv(self.data_ingestion_config.train_data_path,index=None,header=True)
+            test_data.to_csv(self.data_ingestion_config.test_data_path,index=None,header=True)
 
             return train_data,test_data
         
@@ -43,3 +44,5 @@ if __name__=="__main__":
     data_ingestion = DataIngestion()
     train_data,test_data = data_ingestion.initiate_datapath("notebook/data/heart.csv")
 
+    data_transform = DataTransformation()
+    x_train_arr,x_test_arr,preprocessor_obj = data_transform.perform_transformation(train_data,test_data)
