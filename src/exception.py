@@ -17,8 +17,3 @@ class HeartDiseaseError(Exception):
     def __str__(self):
         return self.error_detail
     
-try:
-    10/0 
-except Exception as e:
-    logging.info("division by zero error")
-    raise HeartDiseaseError(e,sys)
