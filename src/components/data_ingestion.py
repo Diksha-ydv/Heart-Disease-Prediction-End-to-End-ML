@@ -7,6 +7,7 @@ import pandas as pd
 import numpy as np 
 from sklearn.model_selection import train_test_split
 from src.components.data_transformation import DataTransformation,DataTransformationConfig
+from src.components.model_training import ModelTrainer,ModelTrainerConfig
 
 @dataclass
 class DataIngestionConfig:
@@ -46,3 +47,7 @@ if __name__=="__main__":
 
     data_transform = DataTransformation()
     x_train_arr,x_test_arr,preprocessor_obj = data_transform.perform_transformation(train_data,test_data)
+
+    model_trainer = ModelTrainer()
+    score = model_trainer.initiate_model_training(x_train_arr,x_test_arr)
+    print(f"best score is : {score}")
