@@ -10,6 +10,14 @@ This project helps demonstrate how machine learning can assist in early detectio
 
 ---
 
+🌐 Live Demo
+
+🚀 Try the deployed application here:
+
+https://heart-disease-prediction-end-to-end-ml-2.onrender.com
+
+Note: Since the application is hosted on Render's free tier, it may take 30–60 seconds to load if it has been inactive.
+
 # 🎯 Problem Statement
 
 Heart disease is one of the leading causes of death worldwide. Early prediction can help healthcare professionals identify high-risk patients and provide timely treatment.
