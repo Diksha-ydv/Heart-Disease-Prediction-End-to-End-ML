@@ -27,8 +27,17 @@ def predict_datapoint():
 
         predict_obj = predict()
         value = predict_obj.pred_val(data)
-        print("Prediction:", value)
-        return render_template("home.html",results=value)
-    
+
+
+        if value == 1:
+            result = "High Risk of Heart Disease"
+        else:
+            result = "Low Risk of Heart Disease"
+
+
+        return render_template(
+            "home.html",
+            results=result
+        )
 if __name__=="__main__":
     app.run(debug=True,host="0.0.0.0",port=8000)
