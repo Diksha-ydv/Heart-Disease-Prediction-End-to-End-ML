@@ -221,7 +221,7 @@ Heart-Disease-Prediction/
 ### 1. Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Diksha-ydv/Heart-Disease-Prediction-End-to-End-ML
 2. Create Virtual Environment
     python -m venv venv
 3. Activate Environment
@@ -252,7 +252,7 @@ Integrate deep learning models
 Machine Learning | Data Science Enthusiast
 
 GitHub:
-(https://github.com/Diksha-ydv)
+https://github.com/Diksha-ydv
 
 ⭐ If you like this project
 Give this repository a star ⭐ and feel free to contribute!
