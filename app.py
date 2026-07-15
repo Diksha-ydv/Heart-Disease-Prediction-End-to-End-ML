@@ -4,11 +4,7 @@ from src.pipeline.predict_pipeline import predict,predict_datapnt
 application = Flask(__name__)
 app = application 
 
-@app.route("/")
-def index():
-    return render_template("index.html")
-
-@app.route("/predict_datapoint",methods=["GET","POST"])
+@app.route("/",methods=["GET","POST"])
 def predict_datapoint():
     if request.method=="GET":
         return render_template("home.html",results=None)
