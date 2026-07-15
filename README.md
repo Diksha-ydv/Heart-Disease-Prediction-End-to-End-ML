@@ -216,44 +216,74 @@ Heart-Disease-Prediction/
 
 ---
 
-# 🚀 How to Run the Project Locally
+## ▶️ Installation
 
-### 1. Clone Repository
+Clone the repository
 
 ```bash
 git clone https://github.com/Diksha-ydv/Heart-Disease-Prediction-End-to-End-ML
-2. Create Virtual Environment
-    python -m venv venv
-3. Activate Environment
+```
 
-Mac/Linux:
+Move into the project directory
 
-source venv/bin/activate
+```bash
+cd Heart-Disease-Prediction-End-to-End-ML
+```
 
-Windows:
+Create a virtual environment
 
+```bash
+python -m venv venv
+```
+
+Activate the environment
+
+### Windows
+
+```bash
 venv\Scripts\activate
-4. Install Dependencies
+```
+
+### macOS / Linux
+
+```bash
+source venv/bin/activate
+```
+
+Install dependencies
+
+```bash
 pip install -r requirements.txt
-5. Run Flask Application
+```
+
+Run the application
+
+```bash
 python app.py
+```
 
-Open:
+Open your browser and visit
 
-http://127.0.0.1:8000/
-📌 Future Improvements
-Deploy using AWS / Azure \
+```
+http://localhost:8000
+```
+
+---
+Future Improvements:
+Deploy using AWS / Azure 
 Add real-time patient database integration
 Improve model performance using advanced ensemble methods
 Add more explainability features
 Integrate deep learning models
 
-👩‍💻 Author - Diksha Yadav
-Machine Learning | Data Science Enthusiast
+## 👩‍💻 Author
 
-GitHub:
-https://github.com/Diksha-ydv
+**Diksha Yadav**
 
-⭐ If you like this project
-Give this repository a star ⭐ and feel free to contribute!
+GitHub: https://github.com/Diksha-ydv
 
+---
+
+## ⭐ Show Your Support
+
+If you found this project useful, please consider giving it a ⭐ on GitHub.
