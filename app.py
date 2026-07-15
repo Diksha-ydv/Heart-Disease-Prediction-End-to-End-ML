@@ -34,6 +34,8 @@ def predict_datapoint():
         else:
             result = "Low Risk of Heart Disease"
 
+        print("Prediction:", value)
+
 
         return render_template(
             "home.html",

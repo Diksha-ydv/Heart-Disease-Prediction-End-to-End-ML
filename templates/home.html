@@ -148,25 +148,30 @@ Predict
 
 {% if results is not none %}
 
-<div class="alert alert-info mt-4 text-center">
+<div class="container mt-4">
 
-    <h3>Prediction: {{ results }}</h3>
+    <h3>
+        Prediction: {{ results }}
+    </h3>
 
-    {% if results|float == 1.0 %}
-        <h3 class="text-danger">❤️ High Risk of Heart Disease</h3>
+
+    {% if results == "High Risk of Heart Disease" %}
+
+        <h3 class="text-danger">
+            ❤️ High Risk of Heart Disease
+        </h3>
+
     {% else %}
-        <h3 class="text-success">💚 Low Risk of Heart Disease</h3>
+
+        <h3 class="text-success">
+            💚 Low Risk of Heart Disease
+        </h3>
+
     {% endif %}
 
 </div>
 
 {% endif %}
-</div>
-
-</div>
-
-</div>
 
 </body>
-
 </html>
