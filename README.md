@@ -4,7 +4,7 @@
 
 Heart Disease Prediction is a Machine Learning classification project that predicts whether a person is likely to have heart disease based on various medical attributes.
 
-The goal of this project is to build an end-to-end ML pipeline that includes data preprocessing, feature engineering, handling class imbalance, model training, hyperparameter tuning, model evaluation, and deployment using a web application.
+The goal of this project is to build an end-to-end ML pipeline that includes data preprocessing, feature engineering, handling class imbalance, model training,model evaluation, and deployment using a web application.
 
 This project helps demonstrate how machine learning can assist in early detection of cardiovascular disease risks.
 
@@ -73,6 +73,7 @@ The dataset contains medical records with various patient attributes.
 - Jupyter Notebook
 - VS Code
 - Git & GitHub
+- Render
 
 ---
 
@@ -84,14 +85,6 @@ Performed analysis to understand the dataset:
 - Statistical analysis
 - Distribution analysis of numerical features
 - Feature relationship visualization
-- Correlation analysis
-- Outlier detection
-
-Key observations:
-
-- Age, MaxHR, Oldpeak, and ChestPainType showed strong relationships with heart disease.
-
----
 
 # ⚙️ Machine Learning Workflow
 
@@ -270,6 +263,7 @@ http://localhost:8000
 
 ---
 Future Improvements:
+
 Deploy using AWS / Azure 
 Add real-time patient database integration
 Improve model performance using advanced ensemble methods
